@@ -1,0 +1,39 @@
+/*.back { 
+	position: relative;*/
+	/*bottom:200px;*/
+	/*z-index: -1;
+	opacity: 1;	*/
+
+/*}*/
+
+/*.portfolio-item:hover >.front {
+	transform:  rotateY(180deg);
+}
+
+.portfolio-item:hover >.back {
+	transform:  rotateY(0deg);*/
+
+/*}*/
+
+/*.front, .back {
+	backface-visibility: hidden;
+	transform-style:  preserve-3d;
+	transition: transform 1s;
+}
+
+	.back {
+		transform:  rotateX( 180deg );
+	}
+.front {
+	position: absolute;
+}*/
+
+/*.flip-container:hover  .flipper, .flip-container.hover .flipper {
+	transform:  rotateX (180);*/
+
+
+/*}*/
+
+/*Below is copy/pasted from the card flip project*/
+
+
