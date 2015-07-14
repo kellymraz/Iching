@@ -36,11 +36,11 @@ var flipACoin = function() {
 
 }
 
-console.log(flipACoin())
-//////////////////////////////////////////////////
-// Now build a function that will call flipACoin 3 times
 
-// a function that will call flipACoin three times, put the results of each flip into an array, and then add the results of the flips together
+
+//////////////////////////////////////////////////
+
+
 
 
 var coinFlipSum = function() {
@@ -63,20 +63,50 @@ var totalCoinValue = coinFlipSum();
 
 console.log("totalCoinValue:  " , totalCoinValue)
 
+// ///////////Jquery///////////////////////////
+
+$(".coinTossButton").click(function() {
+
+	var coin1=flipACoin()
+	var coin2=flipACoin()
+	var coin3=flipACoin()
+
+ console.log(coin1, coin2, coin3)		
+	if (coin1 == 2){
+		$(".coin1container").append('<img src="images/betterCoinTail.jpeg">')
+	}
+
+	else {
+		$(".coin1container").append('<img src="images/betterCoinHead.jpeg">')
+
+	}
+
+	console.log("the button was clicked")
+})
+
+
+
+ 	
+
+
+
+
+
+
 
 ////////////////////////////////////////////////
 // Next, create a function that determines whether the total of the three coins adds up to an ODD or EVEN number.
 
-var isEven = function(totalCoinValue) {
+// var isEven = function(totalCoinValue) {
 
-	console.log("total coin value:  ", totalCoinValue);
+// 	console.log("total coin value:  ", totalCoinValue);
 
-	return (totalCoinValue % 2 === 0) ? true : false;
+// 	return (totalCoinValue % 2 === 0) ? true : false;
 
 	
-}
+// }
 
-console.log(isEven(totalCoinValue))
+// console.log(isEven(totalCoinValue))
 
 
 // 
