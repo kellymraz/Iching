@@ -65,25 +65,19 @@ console.log("totalCoinValue:  " , totalCoinValue)
 
 // ///////////Jquery///////////////////////////
 
-$(".coinTossButton").click(function(event) {
-	event.preventDefault()
+$(".coinTossButton").click(function() {
+
 	var coin1=flipACoin()
 	var coin2=flipACoin()
 	var coin3=flipACoin()
 
-	console.log(coin1, coin2, coin3)
-
-
-
-
-		
-	
+ console.log(coin1, coin2, coin3)		
 	if (coin1 == 2){
-		$(".coin1container").html('<img src="images/bestCoinTail.jpg">')
+		$(".coin1container").append('<img src="images/betterCoinTail.jpeg">')
 	}
 
 	else {
-		$(".coin1container").html('<img src="images/bestCoinHead.jpg">')
+		$(".coin1container").append('<img src="images/betterCoinHead.jpeg">')
 
 	}
 
@@ -91,63 +85,59 @@ $(".coinTossButton").click(function(event) {
 
 
 	if (coin2 == 2){
-		$(".coin1container").html('<img src="images/bestCoinTail.jpg">')
+		$(".coin1container").append('<img src="images/betterCoinTail.jpeg">')
 	}
 
 	else {
-		$(".coin1container").html('<img src="images/bestCoinHead.jpg">')
+		$(".coin1container").append('<img src="images/betterCoinHead.jpeg">')
 
 	}
 
-	
 	if (coin3 == 2){
-		$(".coin1container").html('<img src="images/bestCoinTail.jpg">')
+		$(".coin1container").append('<img src="images/betterCoinTail.jpeg">')
 	}
 
 	else {
-		$(".coin1container").html('<img src="images/bestCoinHead.jpg">')
+		$(".coin1container").append('<img src="images/betterCoinHead.jpeg">')
 
 	}
 
 
-	if (isEven(coin1 + coin2 + coin3)) {
-			$(".hexContainer").prepend('<img class="displayBlock" src="images/two-spaced.png">')
-		}
-
-		
-
-	else {
-		$(".hexContainer").prepend('<img class="displayBlock" src="images/one-solid.png">')
-
-		}
 
 
 
 
-	console.log("the button was clicked")
+
+	// console.log("the button was clicked")
 
 
-});
+
+
+})
+
+
+
+ 	
+
+
+
+
+
 
 
 ////////////////////////////////////////////////
 // Next, create a function that determines whether the total of the three coins adds up to an ODD or EVEN number.
 
-var isEven = function(totalCoinValue) {
+// var isEven = function(totalCoinValue) {
 
-	console.log("total coin value:  ", totalCoinValue);
+// 	console.log("total coin value:  ", totalCoinValue);
 
-	return (totalCoinValue % 2 === 0) ? true : false;
+// 	return (totalCoinValue % 2 === 0) ? true : false;
 
-		
+	
+// }
 
-}
-
-
-
-
-
-
+// console.log(isEven(totalCoinValue))
 
 
 // 
