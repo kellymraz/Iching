@@ -11,21 +11,102 @@
 	width:30%;
 }
 
-.coinContainer {
-	margin-left:5%;
+.titles{
+	position: relative;
+	left:500px;
+	top:10px;
 }
 
-img {
+body{
+	background-image: url('images/close-up-branch.jpeg');
+	background-size: cover;
+}
+
+.trans-bg{
+	background-color: rgba(255, 255, 255, 0.9);
+}
+
+/*.titles{
+
+	position: absolute;
+  	top: 10px;
+  	left: 10px;
+  	background-image: url("images/bridge.jpeg");
+  	background-repeat: no-repeat;
+  	width: 1000px;
+  	height: 1000px;
+  	background-size: 1000px 360px;
+  	z-index: -1;*/
+
+/*}
+*/
+	  
+
+
+.theFont {
+	font-family: Arnoldboecklin, fantasy;
+	font-weight: bold;
+}
+
+
+
+.titleFont {
+	font-family: Arnoldboecklin, fantasy;
+	font-weight: bold;
+	font-size: 5em;
+
+}
+
+.orFont {
+	font-family: Arnoldboecklin, fantasy;
+	font-weight: bold;
+
+}
+
+.secondTitleFont {
+	font-family: Arnoldboecklin, fantasy;
+	font-weight: bold;
+
+
+}
+
+
+.guideFont {
+	font-family: Arnoldboecklin, fantasy;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.hexContainer {
+	font-style: bold
+	postition: relative;
+
+}
+/*/*.coinContainer1 {
+	/*margin-left:5%;*/
+	/*height: 30%;
+	width: 30px;
+}
+*/
+/*img {
 	width:60%;
 	height:auto;
+}*/
+
+
+/*.coinContainer2 {*/
+	/*margin-left: 5%:;*/
+	/*height: 65px;
+	width: 30px;
 }
 
 
-
-
-
-
-
+.coinContainer2 {*/
+	/*margin-left: 5%:;*/
+	/*height: 65px;
+	width: 30px;
+}
+*/
 
 
 /*Below is copy/pasted from the card flip project*/

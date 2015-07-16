@@ -64,14 +64,32 @@ var totalCoinValue = coinFlipSum();
 console.log("totalCoinValue:  " , totalCoinValue)
 
 // ///////////Jquery///////////////////////////
+var clickCount = 0
+
+
 
 $(".coinTossButton").click(function(event) {
 	event.preventDefault()
-	var coin1=flipACoin()
+	
+
+clickCount = clickCount + 1;
+
+	if(clickCount >= 7) {
+		return
+	}
+
+var coin1=flipACoin()
 	var coin2=flipACoin()
 	var coin3=flipACoin()
 
 	console.log(coin1, coin2, coin3)
+
+
+
+console.log(clickCount)
+
+
+
 
 
 
@@ -105,7 +123,7 @@ $(".coinTossButton").click(function(event) {
 	}
 
 	else {
-		$(".coinCcontainer3").html('<img src="images/bestCoinHead.jpg">')
+		$(".coinContainer3").html('<img src="images/bestCoinHead.jpg">')
 
 	}
 
