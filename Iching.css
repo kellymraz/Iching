@@ -6,8 +6,19 @@
 
 }
 
+.portfolio-item {
+	float:left;
+	width:30%;
+}
 
+.coinContainer {
+	margin-left:5%;
+}
 
+img {
+	width:60%;
+	height:auto;
+}
 
 
 

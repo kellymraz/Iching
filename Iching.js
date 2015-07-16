@@ -79,11 +79,11 @@ $(".coinTossButton").click(function(event) {
 		
 	
 	if (coin1 == 2){
-		$(".coin1container").html('<img src="images/bestCoinTail.jpg">')
+		$(".coinContainer1").html('<img src="images/bestCoinTail.jpg">')
 	}
 
 	else {
-		$(".coin1container").html('<img src="images/bestCoinHead.jpg">')
+		$(".coinContainer1").html('<img src="images/bestCoinHead.jpg">')
 
 	}
 
@@ -91,21 +91,21 @@ $(".coinTossButton").click(function(event) {
 
 
 	if (coin2 == 2){
-		$(".coin1container").html('<img src="images/bestCoinTail.jpg">')
+		$(".coinContainer2").html('<img src="images/bestCoinTail.jpg">')
 	}
 
 	else {
-		$(".coin1container").html('<img src="images/bestCoinHead.jpg">')
+		$(".coinContainer2").html('<img src="images/bestCoinHead.jpg">')
 
 	}
 
 	
 	if (coin3 == 2){
-		$(".coin1container").html('<img src="images/bestCoinTail.jpg">')
+		$(".coinContainer3").html('<img src="images/bestCoinTail.jpg">')
 	}
 
 	else {
-		$(".coin1container").html('<img src="images/bestCoinHead.jpg">')
+		$(".coinCcontainer3").html('<img src="images/bestCoinHead.jpg">')
 
 	}
 
