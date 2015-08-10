@@ -26,6 +26,10 @@ body{
 	background-color: rgba(255, 255, 255, 0.9);
 }
 
+.trigramImages{
+	padding:5px;
+	}
+
 /*.titles{
 
 	position: absolute;
@@ -82,31 +86,7 @@ body{
 	postition: relative;
 
 }
-/*/*.coinContainer1 {
-	/*margin-left:5%;*/
-	/*height: 30%;
-	width: 30px;
-}
-*/
-/*img {
-	width:60%;
-	height:auto;
-}*/
 
-
-/*.coinContainer2 {*/
-	/*margin-left: 5%:;*/
-	/*height: 65px;
-	width: 30px;
-}
-
-
-.coinContainer2 {*/
-	/*margin-left: 5%:;*/
-	/*height: 65px;
-	width: 30px;
-}
-*/
 
 
 /*Below is copy/pasted from the card flip project*/

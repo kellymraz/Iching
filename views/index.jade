@@ -1,0 +1,305 @@
+extends layout
+
+block content
+	//- This is just a sample view rendered by our index controller.
+	h1 Private Section
+
+	//- Print the currently logged-in user's name
+	h4 Welcome, #{user.username}!
+
+	//- Give users a link to log out of their account
+	p: a(href="/auth/logout") Log out
+
+	doctype html(lang='en')
+head
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
+    |  &#x9;
+    title
+    |  &#x9;
+    link(rel='stylesheet', href='Iching.css')
+    |  &#x9;&#x9;
+    meta(charset='utf-8')
+  | &#x9;
+  body
+    .container.trans-bg
+      .row
+        .col-sm-10
+          .titles
+            h3.theFont The
+            | &#x9;&#x9;
+            h1.titleFont I Ching
+            |  
+            | &#x9;&#x9;
+            h3.orFont or
+            | &#x9;&#x9; 
+            | &#x9;&#x9;
+            h3.secondTitleFont BOOK OF CHANGES
+            | &#x9;&#x9;
+            h3.guideFont A Guide to Life&apos;s Turning Points
+          | &#x9;
+          form.form-horizontal
+            .form-group
+              label.col-sm-2.control-label(for='inputQuestion') Question
+              | &#x9;    
+              .col-sm-10
+                input#inputQuestion.form-control(type='text', placeholder='Ex. Should I...')
+            | &#x9;  
+            | &#x9;  
+            | &#x9;  
+            | &#x9;  
+            .form-group
+              .col-sm-offset-2.col-sm-10
+                button.coinTossButton.btn.btn-default(type='submit') Click Here to Toss the Coins 6 Times(remember to concentrate on your question!)
+          | &#x9;
+          .row
+            .coinContainer1.col-md-4
+            | &#x9;
+            .coinContainer2.col-md-4
+            | &#x9;
+            .coinContainer3.col-md-4
+          // hexagram container
+          .hexContainer
+            .portfolio-item
+              // <img src="images/one-solid.png">
+          | &#x9;&#x9;
+          table(border='5')
+            tr
+              th(colspan='10')
+                h5 TRIGRAMS
+              | &#x9;&#x9;&#x9;
+              .trigramImages
+                tr
+                  // Row 1
+                  // <td>Lower three down v</td>
+                  td
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td Upper three across&gt;
+                  | &#x9;&#x9;&#x9;&#x9;
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td Heaven
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td Thunder
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td Water
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td Mountain
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td Earth
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td Wind
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td Fire
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td Lake
+                | &#x9;&#x9;&#x9;
+                tr
+                  // Row 2
+                  td Lower three down v
+                  | &#x9;
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td
+                    img(src='images/heaven.png', <='', td='')
+                  td
+                    img(src='images/thunder.png', <='', td='')
+                  td
+                    img(src='images/water.png', <='', td='')
+                  td
+                    img(src='images/mountain.png', <='', td='')
+                  td
+                    img(src='images/earth.png', <='', td='')
+                  td
+                    img(src='images/wind.png', <='', td='')
+                  td
+                    img(src='images/fire.png', <='', td='')
+                  td
+                    img(src='images/lake.png', <='', td='')
+                | &#x9;&#x9;&#x9;
+                tr
+                  // Row 3
+                  td Heaven
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td
+                    img(src='images/heaven.png', <='', td='')
+                  td 1
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 34
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 5
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 26
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 11
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 9
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 14
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 43
+                | &#x9;&#x9;
+                | &#x9;&#x9;&#x9;
+                tr
+                  // Row 4
+                  td Thunder
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td
+                    img(src='images/thunder.png', <='', td='')
+                  td 25
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 51
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 3
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td
+                    a(href='hex27.html') 27
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 24
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 42
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 21
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 17
+                | &#x9;&#x9;&#x9;
+                tr
+                  // Row 5
+                  td Water
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td
+                    img(src='images/water.png', <='', td='')
+                  td 6
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 40
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 29
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 4
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 7
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 59
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 64
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 47
+                | &#x9;&#x9;&#x9;
+                | &#x9;&#x9;&#x9;
+                tr
+                  td Mountain
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td
+                    img(src='images/mountain.png', <='', td='')
+                  td 33
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 62
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 39
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 52
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 15
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 53
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 56
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 31
+                | &#x9;&#x9;&#x9;
+                tr
+                  td Earth
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td
+                    img(src='images/earth.png', <='', td='')
+                  td 12
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 16
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 8
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 23
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 2
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 20
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 35
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 45
+                | &#x9;&#x9;&#x9;
+                tr
+                  td Wind
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td
+                    img(src='images/wind.png', <='', td='')
+                  td 44
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 32
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 48
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 18
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 46
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 57
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 50
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 28
+                | &#x9;&#x9;&#x9;
+                tr
+                  td Fire
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td
+                    img(src='images/fire.png', <='', td='')
+                  td 13
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 55
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 63
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 22
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 36
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 37
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 30
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 49
+                | &#x9;&#x9;&#x9;
+                tr
+                  td Lake
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td
+                    img(src='images/lake.png', <='', td='')
+                  td 10
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 54
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 60
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 41
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 19
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 61
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 38
+                  | &#x9;&#x9;&#x9;&#x9;
+                  td 58
+              // trigram imgs
+      // end row for table
+    // end .container
+    //
+      End Trigram Chart
+      <!/ tr is a "table row" tag
+      td is a "table cell" tag
+    script(type='text/javascript', src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+    // Note:  you can relate a link to another web page in one or more cells.  To do this you only need to include the link commands between the <td> and </td> commands
+    script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js')
+    |  
+    | &#x9;
+    | &#x9;
+    script(type='text/javascript', src='Iching.js')

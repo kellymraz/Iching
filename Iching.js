@@ -8,181 +8,96 @@
 // the total points for the 3 coins will be added up
 
 // Need a button to click to start the coin flip
+var express = require('express');
+var bodyParser = require('body-parser');
 
+// We need database persistence
+var mongoose = require('mongoose');
 
+// Express Session allows us to use Cookies to keep track of
+// a user across multiple pages. We also need to be able to load
+// those cookies using the cookie parser
+var session = require('express-session');
+var cookieParser = require('cookie-parser');
 
+// Flash allows us to store quick one-time-use messages
+// between views that are removed once they are used.
+// Useful for error messages.
+var flash = require('connect-flash');
 
-var flipACoin = function() {
+// Load in the base passport library so we can inject its hooks
+// into express middleware.
+var passport = require('passport');
 
+// Load in our passport configuration that decides how passport
+// actually runs and authenticates
+var passportConfig = require('./config/passport');
 
-	var headorTail = Math.random();
+// Pull in our two controllers...
+var indexController = require('./controllers/index');
+var authenticationController = require('./controllers/authentication');
 
-	if (headorTail > .5) {
- 	
-		// console.log( "HEADS, value of 3")
- 		return 3;
-	
 
-	}
+// Connect to the database
+mongoose.connect('mongodb://localhost/express-passport-local');
 
-	else { 
- 	
- 		// console.log("TAILS, value of 2")
- 		return 2;
 
-	}
+// Define a base express app...
+var app = express();
+app.set('view engine', 'jade');
+app.set('views', __dirname + '/views');
+app.use(express.static(__dirname + '/public'));
+app.use(bodyParser());
 
-	
+// Add in the cookieParser and flash middleware so we can
+// use them later
+app.use(cookieParser());
+app.use(flash());
 
-}
+// Initialize the express session. Needs to be given a secret property
+app.use(session({secret: 'secret'}));
 
+// Hook in passport to the middleware chain
+app.use(passport.initialize());
 
+// Hook in the passport session management into the middleware chain.
+app.use(passport.session());
 
-//////////////////////////////////////////////////
 
+// Our get request for viewing the login page
+app.get('/auth/login', authenticationController.login);
 
+// Post received from submitting the login form
+app.post('/auth/login', authenticationController.processLogin);
 
+// Post received from submitting the signup form
+app.post('/auth/signup', authenticationController.processSignup);
 
-var coinFlipSum = function() {
+// Any requests to log out can be handled at this url
+app.get('/auth/logout', authenticationController.logout);
 
-	var value = 0
+// ***** IMPORTANT ***** //
+// By including this middleware (defined in our config/passport.js module.exports),
+// We can prevent unauthorized access to any route handler defined after this call
+// to .use()
+app.use(passportConfig.ensureAuthenticated);
 
-	for(i = 0; i < 3; i ++) {
+// Because this route occurs after the ensureAuthenticated middleware, it will require
+// authentication before access is allowed.
+app.get('/', indexController.index);
 
-		value += flipACoin()
 
-}
-
-
-return value ;
-	
-}
-
-var totalCoinValue = coinFlipSum();
-
-
-console.log("totalCoinValue:  " , totalCoinValue)
-
-// ///////////Jquery///////////////////////////
-var clickCount = 0
-
-
-
-$(".coinTossButton").click(function(event) {
-	event.preventDefault()
-	
-
-clickCount = clickCount + 1;
-
-	if(clickCount >= 7) {
-		return
-	}
-
-var coin1=flipACoin()
-	var coin2=flipACoin()
-	var coin3=flipACoin()
-
-	console.log(coin1, coin2, coin3)
-
-
-
-console.log(clickCount)
-
-
-
-
-
-
-
-		
-	
-	if (coin1 == 2){
-		$(".coinContainer1").html('<img src="images/bestCoinTail.jpg">')
-	}
-
-	else {
-		$(".coinContainer1").html('<img src="images/bestCoinHead.jpg">')
-
-	}
-
-	
-
-
-	if (coin2 == 2){
-		$(".coinContainer2").html('<img src="images/bestCoinTail.jpg">')
-	}
-
-	else {
-		$(".coinContainer2").html('<img src="images/bestCoinHead.jpg">')
-
-	}
-
-	
-	if (coin3 == 2){
-		$(".coinContainer3").html('<img src="images/bestCoinTail.jpg">')
-	}
-
-	else {
-		$(".coinContainer3").html('<img src="images/bestCoinHead.jpg">')
-
-	}
-
-
-	if (isEven(coin1 + coin2 + coin3)) {
-			$(".hexContainer").prepend('<img class="displayBlock" src="images/two-spaced.png">')
-		}
-
-		
-
-	else {
-		$(".hexContainer").prepend('<img class="displayBlock" src="images/one-solid.png">')
-
-		}
-
-
-
-
-	console.log("the button was clicked")
-
-
+// Start our server!
+var server = app.listen(5297, function() {
+	console.log('Express server listening on port ' + server.address().port);
 });
 
 
-////////////////////////////////////////////////
-// Next, create a function that determines whether the total of the three coins adds up to an ODD or EVEN number.
-
-var isEven = function(totalCoinValue) {
-
-	console.log("total coin value:  ", totalCoinValue);
-
-	return (totalCoinValue % 2 === 0) ? true : false;
-
-		
-
-}
 
 
 
 
-
-
-
-
-// 
-// This odd or even recognizer will determine whether a hexagram line will be drawn as solid (if odd) or 
-// 	broken (if even)
-
-// Make a button that will start the coin toss
-// Will have to be clicked six times and form the hexagram
-
-// Make 3 coin images that will flip/bounce when that button
-// is pressed
-
-// Create the hexagram, bottom-up, drawing broken or unbroken lines based on totalCoinValue being even (broken line)  or uneven (solid line)
-
-// Recreate the Trigram chart?  
-
-// Click into the right hexagram as determined in the Trigram chart?  
+  
 
 
 
