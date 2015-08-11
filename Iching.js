@@ -76,35 +76,26 @@ app.post('/auth/signup', authenticationController.processSignup);
 // Any requests to log out can be handled at this url
 app.get('/auth/logout', authenticationController.logout);
 
+app.get('/', indexController.index);
+
+app.get('/cointoss', indexController.coinToss)
+
+// REMEMBER   indexController.coinToss corresponds to a function within the controller
+
+
 // ***** IMPORTANT ***** //
 // By including this middleware (defined in our config/passport.js module.exports),
 // We can prevent unauthorized access to any route handler defined after this call
 // to .use()
+
 app.use(passportConfig.ensureAuthenticated);
 
 // Because this route occurs after the ensureAuthenticated middleware, it will require
 // authentication before access is allowed.
-app.get('/', indexController.index);
 
 
 // Start our server!
 var server = app.listen(5297, function() {
 	console.log('Express server listening on port ' + server.address().port);
 });
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
 

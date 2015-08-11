@@ -7,10 +7,19 @@ var indexController = {
     // called out in app.js, we have access to the
     // logged-in user's document from the database
     // via the injected "req.user" variable
-res.render('index', {
-      user: req.user
-    });
+		res.render('index', {
+		      user: req.user
+		    });
+  },
+
+  coinToss: function(req, res){
+  	res.render('cointoss', {
+  				user: req.user
+  	})
+
   }
+
+
 };
 
  // Export our index control

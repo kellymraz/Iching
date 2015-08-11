@@ -1,0 +1,27 @@
+extends layout
+
+block content
+
+	form.form-horizontal
+		.form-group
+			label.col-sm-2.control-label(for='inputQuestion') Question
+			.col-sm-10
+				input#inputQuestion.form-control(type='text', placeholder='Ex. Should I...') 
+		.form-group
+			.col-sm-offset-2.col-sm-10
+				button.coinTossButton.btn.btn-default(type='submit') Click Here to Toss the Coins 6 Times(remember to 	concentrate on your question!)
+				.row
+					.coinContainer1.col-md-4
+				
+					.coinContainer2.col-md-4
+				
+					.coinContainer3.col-md-4
+					
+	.hexContainer
+block scripts
+	script(src="js/main.js")
+
+					//- <!-- // hexagram container -->
+					//- .hexContainer
+					//- 	.portfolio-item
+					//- 		// <img src="images/one-solid.png">

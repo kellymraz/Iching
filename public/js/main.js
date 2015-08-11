@@ -85,11 +85,11 @@ console.log(clickCount)
 		
 	
 	if (coin1 == 2){
-		$(".coinContainer1").html('<img src="images/bestCoinTail.jpg">')
+		$(".coinContainer1").html('<img src="images/dragoncoin-tails.png">')
 	}
 
 	else {
-		$(".coinContainer1").html('<img src="images/bestCoinHead.jpg">')
+		$(".coinContainer1").html('<img src="images/dragoncoin-heads.png">')
 
 	}
 
@@ -97,24 +97,27 @@ console.log(clickCount)
 
 
 	if (coin2 == 2){
-		$(".coinContainer2").html('<img src="images/bestCoinTail.jpg">')
+		$(".coinContainer2").html('<img src="images/dragoncoin-tails.png">')
 	}
 
 	else {
-		$(".coinContainer2").html('<img src="images/bestCoinHead.jpg">')
+		$(".coinContainer2").html('<img src="images/dragoncoin-heads.png">')
 
 	}
 
 	
 	if (coin3 == 2){
-		$(".coinContainer3").html('<img src="images/bestCoinTail.jpg">')
+		$(".coinContainer3").html('<img src="images/dragoncoin-tails.png">')
 	}
 
 	else {
-		$(".coinContainer3").html('<img src="images/bestCoinHead.jpg">')
+		$(".coinContainer3").html('<img src="images/dragoncoin-heads.png">')
 
 	}
 
+// Below is the part that draws the hexagram as the coins are tossed
+
+// 
 
 	if (isEven(coin1 + coin2 + coin3)) {
 			$(".hexContainer").prepend('<img class="displayBlock" src="images/two-spaced.png">')
@@ -137,7 +140,7 @@ console.log(clickCount)
 
 
 ////////////////////////////////////////////////
-// Next, create a function that determines whether the total of the three coins adds up to an ODD or EVEN number.
+// Below is the function that determines whether the total of the three coins adds up to an ODD or EVEN number.
 
 var isEven = function(totalCoinValue) {
 
@@ -146,10 +149,38 @@ var isEven = function(totalCoinValue) {
 	return (totalCoinValue % 2 === 0) ? true : false;
 
 		
-
 }
 
+// Below begins the code for Animate.css Coin Flip
 
+$(document).ready(function() {
+  $.preloadImages = function() {
+  for (var i = 0; i < arguments.length; i++) {
+    $("<img />").attr("src", arguments[i]);
+  }
+}
+
+$.preloadImages("http://www.goldcoinhistory.com/wp-content/uploads/2012/05/GP_US_1850_C_Liberty_Head_One_Dollar_Type_I_obverse.jpeg","http://www.goldcoinhistory.com/wp-content/uploads/2012/05/GP_US_1850_C_Liberty_Head_One_Dollar_Type_I_reverse.jpeg");
+$('h1').addClass('animated fadeInDown');
+				function flipMe(){
+					var flip = ["heads","tails"];
+					var side = flip[Math.floor(Math.random()*flip.length)];
+
+					if(side == "heads"){
+						$("#regTitle").html("You Got " + side).addClass('animated pulse');	
+						$('h1').addClass('animated pulse');
+            $(".image").html('<img class="heads" src="http://www.goldcoinhistory.com/wp-content/uploads/2012/05/GP_US_1850_C_Liberty_Head_One_Dollar_Type_I_obverse.jpeg"/>');
+						$('.heads').addClass('animated flip');	
+					}else{
+						$("#regTitle").html("You Got " + side);	
+						$('h1').addClass('animated pulse');
+            $(".image").html('<img class="tails" src="http://www.goldcoinhistory.com/wp-content/uploads/2012/05/GP_US_1850_C_Liberty_Head_One_Dollar_Type_I_reverse.jpeg"/>');
+						$('.tails').addClass('animated flip');
+					}
+				}
+
+				$(".butts").click(flipMe);
+		});
 
 
 
