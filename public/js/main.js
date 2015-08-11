@@ -20,15 +20,9 @@ var flipACoin = function() {
 
 	}
 
-	
-
 }
 
-
-
 //////////////////////////////////////////////////
-
-
 
 
 var coinFlipSum = function() {
@@ -150,8 +144,9 @@ var isEven = function(totalCoinValue) {
 
 		
 }
-
-// Below begins the code for Animate.css Coin Flip
+         // MAKING THE COINS FLIP/BOUNCE ///
+// Below begins the code for Animate.css Coin Flip //////
+// It has been copied to the file coin-flip practice in the js folder Tuesday 8/11
 
 $(document).ready(function() {
   $.preloadImages = function() {
@@ -182,7 +177,8 @@ $('h1').addClass('animated fadeInDown');
 				$(".butts").click(flipMe);
 		});
 
-
+// End Animate.css coin
+// END MAKING THE COINS FLIP/BOUNCE ///////
 
 
 
