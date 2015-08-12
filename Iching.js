@@ -78,7 +78,11 @@ app.get('/auth/logout', authenticationController.logout);
 
 app.get('/', indexController.index);
 
-app.get('/cointoss', indexController.coinToss)
+app.get('/cointoss', indexController.coinToss);
+
+app.get('/login', indexController.login);
+
+app.get('/howto', indexController.howto);
 
 // REMEMBER   indexController.coinToss corresponds to a function within the controller
 

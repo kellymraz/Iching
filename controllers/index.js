@@ -1,23 +1,30 @@
 // Simple index controller
 var indexController = {
 
-// Handle incoming requests for the '/' route
-  index: function(req, res){
-// Since this route requires authentication,
-    // called out in app.js, we have access to the
-    // logged-in user's document from the database
-    // via the injected "req.user" variable
+	index: function(req, res){
+
 		res.render('index', {
-		      user: req.user
-		    });
-  },
+			user: req.user
+		});
+	},
 
-  coinToss: function(req, res){
-  	res.render('cointoss', {
-  				user: req.user
-  	})
+	coinToss: function(req, res){
+		res.render('cointoss', {
+			user: req.user
+		});
 
-  }
+	},
+
+	login: function(req, res){
+		res.render("login", {user: req.user})
+	},
+
+	howto: function(req, res){
+		res.render("howto", {user: req.user})
+
+	},
+
+
 
 
 };

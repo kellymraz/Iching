@@ -8,26 +8,28 @@ $(document).ready(function() {
   }
 }
 
-$.preloadImages("http://www.goldcoinhistory.com/wp-content/uploads/2012/05/GP_US_1850_C_Liberty_Head_One_Dollar_Type_I_obverse.jpeg","http://www.goldcoinhistory.com/wp-content/uploads/2012/05/GP_US_1850_C_Liberty_Head_One_Dollar_Type_I_reverse.jpeg");
+// Iching has 3 coins!!!
+
+// Switch out http... for img src=images/dragoncoin-tails.png and similarly image for heads heads
+$.preloadImages('<img src="images/dragoncoin-heads.png">', '<img src="images/dragoncoin-tails.png">');
 $('h1').addClass('animated fadeInDown');
 				function flipMe(){
 					var flip = ["heads","tails"];
 					var side = flip[Math.floor(Math.random()*flip.length)];
 
 					if(side == "heads"){
-						$("#regTitle").html("You Got " + side).addClass('animated pulse');	
-						$('h1').addClass('animated pulse');
-            $(".image").html('<img class="heads" src="http://www.goldcoinhistory.com/wp-content/uploads/2012/05/GP_US_1850_C_Liberty_Head_One_Dollar_Type_I_obverse.jpeg"/>');
+						
+						
+            $(".image").html('<img class="heads" src="images/dragoncoin-heads.png"/>');
 						$('.heads').addClass('animated flip');	
 					}else{
-						$("#regTitle").html("You Got " + side);	
-						$('h1').addClass('animated pulse');
-            $(".image").html('<img class="tails" src="http://www.goldcoinhistory.com/wp-content/uploads/2012/05/GP_US_1850_C_Liberty_Head_One_Dollar_Type_I_reverse.jpeg"/>');
+						
+            $(".image").html('<img class="tails" src="images/dragoncoin-tails.png"/>');
 						$('.tails').addClass('animated flip');
 					}
 				}
 
-				$(".butts").click(flipMe);
+				$(".coinTossButton").click(flipMe);
 		});
 
 // End Animate.css coin
