@@ -2,27 +2,7 @@
 // $().on("click, '#one-solid", function?? )"listen for event on dynamically created element"
 // Look at "Delegated Event Syntax" for help
 
-// var flipACoin = function() {
 
-
-// 	var headorTail = Math.random();
-
-// 	if (headorTail > .5) {
- 	
-// 		// console.log( "HEADS, value of 3")
-//  		return 3;
-	
-
-// 	}
-
-// 	else { 
- 	
-//  		// console.log("TAILS, value of 2")
-//  		return 2;
-
-// 	}
-
-// }
 
 // //////////////////////////////////////////////////
 
@@ -54,42 +34,12 @@
 
 // $(".coinTossButton").click(function(event) {
 // 	event.preventDefault()
-// MAKING THE COINS FLIP/BOUNCE ///
-// Below begins the code for Animate.css Coin Flip //////
 
-$(document).ready(function() {
-  $.preloadImages = function() {
-  for (var i = 0; i < arguments.length; i++) {
-    $("<img />").attr("src", arguments[i]);
-  }
-}
 
-// Iching has 3 coins!!!
 
-// Switch out http... for img src=images/dragoncoin-tails.png and similarly image for heads heads
-$.preloadImages('<img src="images/dragoncoin-heads.png">', '<img src="images/dragoncoin-tails.png">');
-$('h1').addClass('animated fadeInDown');
-				function flipMe(){
-					var flip = ["heads","tails"];
-					var side = flip[Math.floor(Math.random()*flip.length)];
 
-					if(side == "heads"){
-						
-						
-            $(".image").html('<img class="heads" src="images/dragoncoin-heads.png"/>');
-						$('.heads').addClass('animated flip');	
-					}else{
-						
-            $(".image").html('<img class="tails" src="images/dragoncoin-tails.png"/>');
-						$('.tails').addClass('animated flip');
-					}
-				}
 
-				$(".coinTossButton").click(flipMe);
-		});
 
-// End Animate.css coin
-// END MAKING THE COINS FLIP/BOUNCE ///////	
 
 // clickCount = clickCount + 1;
 
@@ -150,7 +100,7 @@ $('h1').addClass('animated fadeInDown');
 
 // // 
 
-// 	if (isEven(coin1 + coin2 + coin3)) {
+// 	if (isEven(coin01 + coin02 + coin03)) {
 // 			$(".hexContainer").prepend('<img class="displayBlock" src="images/two-spaced.png">')
 // 		}
 
@@ -181,13 +131,7 @@ var isEven = function(totalCoinValue) {
 
 		
 }
-         // MAKING THE COINS FLIP/BOUNCE ///
-// Below begins the code for Animate.css Coin Flip //////
-// It has been copied to the file coin-flip practice in the js folder Tuesday 8/11
-
-
-// End Animate.css coin
-// END MAKING THE COINS FLIP/BOUNCE ///////
+         
 
 
 

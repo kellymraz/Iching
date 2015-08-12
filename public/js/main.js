@@ -12,30 +12,34 @@ $.preloadImages("images/dragoncoin-heads.png",
 	"images/dragoncoin-tails.png") 
 
 $('h1').addClass('animated fadeInDown');
-				function flipMe(){
-					var flip = ["heads","tails"];
-					var side = flip[Math.floor(Math.random()*flip.length)];
-					
+function flipMe(whichCoin){
+	var flip = ["heads","tails"];
+	var side = flip[Math.floor(Math.random()*flip.length)];
+	
 
-					if(side == "heads"){
-						
-						
-            $(".image").html('<img class="heads" src="images/dragoncoin-heads.png"/>');
-						$('.heads').addClass('animated flip');	
-					}else{
-						
-            $(".image").html('<img class="tails" src="images/dragoncoin-tails.png"/>');
-						$('.tails').addClass('animated flip');
-					}
-				}
+	if(side == "heads"){
+		
+		
+		$(whichCoin).html('<img class="heads" src="images/dragoncoin-heads.png"/>');
 
-				// $(".coinTossButton").click(flipMe);
-				$(".coinTossButton").click(function(e){
-					e.preventDefault();
-					flipMe();
+	} else {
+		
+		$(whichCoin).html('<img class="tails" src="images/dragoncoin-tails.png"/>');
+	}
+
+	$(whichCoin).find('img').removeClass('animated flip')
+	$(whichCoin).find('img').addClass('animated flip');
+}
+
+// $(".coinTossButton").click(flipMe);
+$(".coinTossButton").click(function(e){
+	e.preventDefault();
+	flipMe('#coin01');
+	flipMe('#coin02');
+	flipMe('#coin03');
 
 
-				});
+});
 
 
 		});
