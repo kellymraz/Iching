@@ -7,7 +7,7 @@ $(document).ready(function() {
 
 // Iching has 3 coins!!!
 
-// Switch out http... for img src=images/dragoncoin-tails.png and similarly image for heads heads
+// Switch out http... for img src=images/dragoncoin-tails.png and similarly image for heads 
 $.preloadImages("images/dragoncoin-heads.png", 
 	"images/dragoncoin-tails.png") 
 
@@ -29,5 +29,13 @@ $('h1').addClass('animated fadeInDown');
 					}
 				}
 
-				$(".coinTossButton").click(flipMe);
+				// $(".coinTossButton").click(flipMe);
+				$(".coinTossButton").click(function(e){
+					e.preventDefault();
+					flipMe();
+
+
+				});
+
+
 		});

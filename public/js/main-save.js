@@ -116,7 +116,7 @@ $('h1').addClass('animated fadeInDown');
 		
 	
 // 	if (coin1 == 2){
-// 		$(".coinContainer1").html('<img src="images/dragoncoin-tails.png">')
+// 		$("#coin01").html('<img src="images/dragoncoin-tails.png">')
 // 	}
 
 // 	else {
