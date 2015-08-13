@@ -24,7 +24,9 @@ var indexController = {
 
 	},
 
-
+	hex27: function(req, res){
+		res.render("hex27", {user: req.user})
+	},
 
 
 };

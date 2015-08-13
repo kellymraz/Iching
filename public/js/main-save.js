@@ -7,45 +7,38 @@
 // //////////////////////////////////////////////////
 
 
-// var coinFlipSum = function() {
+var coinFlipSum = function() {
 
-// 	var value = 0
+	var value = 0
 
-// 	for(i = 0; i < 3; i ++) {
+	for(i = 0; i < 3; i ++) {
 
-// 		value += flipACoin()
+		value += flipACoin()
 
-// }
+}
 
 
-// return value ;
+return value ;
 	
-// }
+}
 
-// var totalCoinValue = coinFlipSum();
-
-
-// console.log("totalCoinValue:  " , totalCoinValue)
-
-// // ///////////Jquery///////////////////////////
-// var clickCount = 0
+var totalCoinValue = coinFlipSum();
 
 
+console.log("totalCoinValue:  " , totalCoinValue)
 
-// $(".coinTossButton").click(function(event) {
-// 	event.preventDefault()
-
-
-
+// ///////////Jquery///////////////////////////
+var clickCount = 0
 
 
+$(".coinTossButton").click(function(event) {
+	event.preventDefault()
 
+clickCount = clickCount + 1;
 
-// clickCount = clickCount + 1;
-
-// 	if(clickCount >= 7) {
-// 		return
-// 	}
+	if(clickCount >= 7) {
+		return
+	}
 
 // var coin1=flipACoin()
 // 	var coin2=flipACoin()

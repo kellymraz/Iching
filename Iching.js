@@ -84,6 +84,9 @@ app.get('/login', indexController.login);
 
 app.get('/howto', indexController.howto);
 
+// Hexagram Template Routes
+app.get('/hex27', indexController.hex27);
+
 // REMEMBER   indexController.coinToss corresponds to a function within the controller
 
 
