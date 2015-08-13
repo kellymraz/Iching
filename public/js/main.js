@@ -1,4 +1,4 @@
-// This part makes the 3 conins flip
+// This part handles the coin images and makes the 3 coins flip
 
 $(document).ready(function() {
   $.preloadImages = function() {
@@ -41,7 +41,10 @@ function flipMe(whichCoin){
 	return coin;
 }
 
+// clickCount makes sure only six lines are drawn to make the hexagram
 var clickCount = 0
+
+var hexagram = [];
 
 $(".coinTossButton").click(function(e){
 	e.preventDefault();
@@ -59,68 +62,91 @@ console.log("coin01 ", coin01)
 console.log("coin02 ", coin02)
 console.log("coin03 ", coin03)
 
+// This part draws the hexagram based on the total value of the 3 coins added together.  Heads are worth 3 "points", tails are worth 2 "points".  If the coins add up to an even number=broken line; else a solid line
+
 console.log("isEven ", isEven(coin01 + coin02 + coin03))
 
 	if (isEven(coin01 + coin02 + coin03)) {
 		$(".hexContainer").prepend('<img class="displayBlock" src="images/two-spaced.png">')
-		
+		hexagram.push("0")
+
+
+
 		}
  
 		
 	else {
 	$(".hexContainer").prepend('<img class="displayBlock" src="images/one-solid.png">')
- 
+ 		hexagram.push("1")
+	}
 
+	console.log("hexagram:", hexagram);
 
+	if(clickCount == 6) {
+		var newhex = hexagram.join('')
+		console.log("joined hexagram:", newhex);
+		$(".buttoncontainer").append("<a class='gotoHexButton' href="/hex27/" + newhex>")
+
+	}
+
+// Begin attempt to make button show on 6th click
 	
-		}
+
+// var show = 
 
 
+
+// $("#show").click(function(){
+//     $("p").show();
+// })
+
+// $("#hide").click(function(){
+//     $("p").hide();	
+// })
+
+// Javascript example code:
+
+// function show(){
+// if(document.layers) document.layers['mydiv'].visibility="show";
+// if(document.getElementById) document.getElementById("mydiv").style.visibility="visible";
+// if(document.all) document.all.mydiv.style.visibility="visible";
+// }
+
+// function hide(){
+// if(document.layers) document.layers['mydiv'].visibility="hide";
+// if(document.getElementById) document.getElementById("mydiv").style.visibility="hidden";
+// if(document.all) document.all.mydiv.style.visibility="hidden";
+// }
+// ///////////End attempt to make button show on 6th click
+
+console.log("isEven ", isEven(coin01 + coin02 + coin03))
+
+// Jquery example
+
+
+// $(".gotoHexButton").click(function() {
+//     $("#overlay").css("visibility", "visible");
+// });
+
+	});
 });
+// // W3 example
+
+// $("#hide").click(function(){
+//     $("p").hide();
+// });
+
+// $("#show").click(function(){
+//     $("p").show();
+// });
 
 
-		});
-
-// This part draws the hexagram based on the total value of the 3 coins added together.  Heads are worth 3, tails are worth 2
-
-
-console.log("isEven ", isEven(coin01 + coin02 + coin03))
-
-
-
-	if (isEven(coin01 + coin02 + coin03)) {
-		$(".hexContainer").prepend('<img class="displayBlock" src="images/two-spaced.png">')
-		
-		}
- 
-		
-	else {
-	$(".hexContainer").prepend('<img class="displayBlock" src="images/one-solid.png">')
- 
-
-
-	
-		}
- 
+// End coin toss and drawing of hexagram/////////////////// 
  	
 
 
+// 	hexagram += ","
 
-
-// ////////////////Below keeps the number of clicks at 6
-
-// ///////////Jquery///////////////////////////
-// var clickCount = 0
-
-
-
-// $(".coinTossButton").click(function(event) {
-// 	event.preventDefault()
-
-// clickCount = clickCount + 1;
-
-// 		return
-// 	if(clickCount >= 7) 
 
 	
 

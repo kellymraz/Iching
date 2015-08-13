@@ -16,18 +16,26 @@ var indexController = {
 	},
 
 	login: function(req, res){
-		res.render("login", {user: req.user})
+		res.render("login", {
+			user: req.user
+		});
 	},
 
 	howto: function(req, res){
-		res.render("howto", {user: req.user})
-
+		res.render("howto", {
+			user: req.user
+		});
 	},
 
 	hex27: function(req, res){
-		res.render("hex27", {user: req.user})
-	},
+		res.render("hex27", {
+			user: req.user
+		})
+	}
 
+	// hexLessons: function(req, res){
+	// 	res.render("hexLessons)
+	// }
 
 };
 
