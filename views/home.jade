@@ -2,7 +2,7 @@ extends layout
 
 block content
 
-	.container.trans-bg
+	.container.trans-bg.push-down
 		.row
 			.col-sm-10
 				.titles
@@ -34,6 +34,16 @@ block content
 		.buttoncontainer
 			.col-sm-offset-2.col-sm-10
 		a.hexLessonButton.btn.btn-default(href="/hexLessons") Advice for this Hexagram
+
+//- This is just a sample view rendered by our index controller.
+	h1 Private Section
+
+	//- Print the currently logged-in user's name
+	h4 Welcome, #{user.username}!
+
+	//- Give users a link to log out of their account
+	p: a(href="/auth/logout") Log out
+
 
 
 				

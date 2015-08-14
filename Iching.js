@@ -76,7 +76,11 @@ app.post('/auth/signup', authenticationController.processSignup);
 // Any requests to log out can be handled at this url
 app.get('/auth/logout', authenticationController.logout);
 
-app.get('/', indexController.index);
+app.get('/', function(req, res){
+	res.redirect("/home")
+})
+
+app.get('/home', indexController.index);
 
 app.get('/cointoss', indexController.coinToss);
 
@@ -87,19 +91,9 @@ app.get('/howto', indexController.howto);
 // Hexagram Template Routes
 app.get('/hexLesson/:lesson', indexController.findLesson);
 
+// app.use(passportConfig.ensureAuthenticated);
 
-// app.get('/hexLessons', indexController.hexLessons)
-
-// REMEMBER   indexController.coinToss corresponds to a function within the controller
-
-
-// ***** IMPORTANT ***** //
-// By including this middleware (defined in our config/passport.js module.exports),
-// We can prevent unauthorized access to any route handler defined after this call
-// to .use()
-
-app.use(passportConfig.ensureAuthenticated);
-
+app.get('/journal', indexController.getJournal)
 // Because this route occurs after the ensureAuthenticated middleware, it will require
 // authentication before access is allowed.
 

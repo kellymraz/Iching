@@ -96,12 +96,12 @@ console.log("isEven ", isEven(coin01 + coin02 + coin03))
 		var newhex = hexagram.join('');
 		console.log("joined hexagram:", newhex)
 
-		var showhexButton=$('<a href="/hexLesson/' + newhex + '">Click here for your lesson</a>')
+		var showhexButton=$('<a href="/hexLesson/' + newhex + '">Click here for your advice</a>')
 		$(".hexButtonContainer").append(showhexButton)
 		
  	}
 
-// $(".buttoncontainer").append("<a class='gotoHexButton' href='/hex27/' + newhex +"+>+")
+
 	
 
 

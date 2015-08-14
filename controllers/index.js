@@ -7,7 +7,7 @@ var indexController = {
 
 	index: function(req, res){
 
-		res.render('index', {
+		res.render('home', {
 			user: req.user
 		});
 	},
@@ -31,18 +31,29 @@ var indexController = {
 		});
 	},
 
+	// goHome: function(req, res){
+	// 	res.render("/"), {
+	// 		user: req.user
+	// 	});
+	// },
+
+
 	findLesson: function(req, res){
 		Lesson.findOne({hexNumber:req.params.lesson}, function(err, doc){
 
 			res.render("lesson", {
 				user: req.user,
 				lesson: doc
-				
+
 			})	
 
 
 		})
 		
+	},
+
+	getJournal:  function(req, res){
+		res.render("journal")
 	}
 
 	// hexLessons: function(req, res){
