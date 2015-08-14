@@ -1,3 +1,13 @@
+var getLesson = function(){
+ 	var hexLesson = [];
+ 	var get
+ }
+
+
+
+
+
+
 // This part handles the coin images and makes the 3 coins flip
 
 $(document).ready(function() {
@@ -70,82 +80,41 @@ console.log("isEven ", isEven(coin01 + coin02 + coin03))
 		$(".hexContainer").prepend('<img class="displayBlock" src="images/two-spaced.png">')
 		hexagram.push("0")
 
-
-
-		}
+	}
  
 		
 	else {
-	$(".hexContainer").prepend('<img class="displayBlock" src="images/one-solid.png">')
+		$(".hexContainer").prepend('<img class="displayBlock" src="images/one-solid.png">')
  		hexagram.push("1")
 	}
 
-	console.log("hexagram:", hexagram);
-
-	if(clickCount == 6) {
-		var newhex = hexagram.join('')
-		console.log("joined hexagram:", newhex);
-		$(".buttoncontainer").append("<a class='gotoHexButton' href="/hex27/" + newhex>")
-
-	}
 
 // Begin attempt to make button show on 6th click
+	console.log("hexagram:", hexagram);
+
+	if(clickCount === 6) {
+		var newhex = hexagram.join('');
+		console.log("joined hexagram:", newhex)
+
+		var showhexButton=$('<a href="/hexLesson/' + newhex + '">Click here for your lesson</a>')
+		$(".hexButtonContainer").append(showhexButton)
+		
+ 	}
+
+// $(".buttoncontainer").append("<a class='gotoHexButton' href='/hex27/' + newhex +"+>+")
 	
 
-// var show = 
 
 
 
-// $("#show").click(function(){
-//     $("p").show();
-// })
-
-// $("#hide").click(function(){
-//     $("p").hide();	
-// })
-
-// Javascript example code:
-
-// function show(){
-// if(document.layers) document.layers['mydiv'].visibility="show";
-// if(document.getElementById) document.getElementById("mydiv").style.visibility="visible";
-// if(document.all) document.all.mydiv.style.visibility="visible";
-// }
-
-// function hide(){
-// if(document.layers) document.layers['mydiv'].visibility="hide";
-// if(document.getElementById) document.getElementById("mydiv").style.visibility="hidden";
-// if(document.all) document.all.mydiv.style.visibility="hidden";
-// }
-// ///////////End attempt to make button show on 6th click
-
-console.log("isEven ", isEven(coin01 + coin02 + coin03))
-
-// Jquery example
-
-
-// $(".gotoHexButton").click(function() {
-//     $("#overlay").css("visibility", "visible");
-// });
-
-	});
 });
-// // W3 example
 
-// $("#hide").click(function(){
-//     $("p").hide();
-// });
-
-// $("#show").click(function(){
-//     $("p").show();
-// });
-
-
-// End coin toss and drawing of hexagram/////////////////// 
+});
+// // End coin toss and drawing of hexagram/////////////////// 
  	
 
 
-// 	hexagram += ","
+
 
 
 	

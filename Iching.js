@@ -39,7 +39,7 @@ var authenticationController = require('./controllers/authentication');
 
 
 // Connect to the database
-mongoose.connect('mongodb://localhost/express-passport-local');
+mongoose.connect('mongodb://localhost/Iching');
 
 
 // Define a base express app...
@@ -85,7 +85,8 @@ app.get('/login', indexController.login);
 app.get('/howto', indexController.howto);
 
 // Hexagram Template Routes
-app.get('/hex27', indexController.hex27);
+app.get('/hexLesson/:lesson', indexController.findLesson);
+
 
 // app.get('/hexLessons', indexController.hexLessons)
 
