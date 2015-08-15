@@ -1,13 +1,4 @@
-// console.log("Book of Changes")
 
-// There will be 3 coins tossed at the same time
-
-// Heads are worth 3 points  
-// Tails are worth 2 points 
-
-// the total points for the 3 coins will be added up
-
-// Need a button to click to start the coin flip
 var express = require('express');
 var bodyParser = require('body-parser');
 
@@ -80,6 +71,11 @@ app.get('/', function(req, res){
 	res.redirect("/home")
 })
 
+app.get('/', function(req, res){
+	res.redirect("/cointoss")
+
+})
+
 app.get('/home', indexController.index);
 
 app.get('/cointoss', indexController.coinToss);
@@ -88,14 +84,17 @@ app.get('/login', indexController.login);
 
 app.get('/howto', indexController.howto);
 
-// Hexagram Template Routes
-app.get('/hexLesson/:lesson', indexController.findLesson);
 
+app.get('/hexLesson/:lesson', indexController.findLesson);
+// DO NOT DELETE THE LINE BELOW. /////////
 // app.use(passportConfig.ensureAuthenticated);
 
 app.get('/journal', indexController.getJournal)
-// Because this route occurs after the ensureAuthenticated middleware, it will require
-// authentication before access is allowed.
+
+
+
+
+
 
 
 // Start our server!
