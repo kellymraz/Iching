@@ -1,6 +1,9 @@
 
 
-{ "scripts":{
+{ "engines": {
+    "node": "0.10.x"
+  },
+    "scripts":{
     "start":"node Iching.js"
 },
   "dependencies": {
