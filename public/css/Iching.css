@@ -4,8 +4,12 @@
 	display: none;
 	margin: 10px auto;
   height:20px;
-  width:250px;
+  width:171px;
 
+}
+
+.showHexButton {
+  position: absolute;
 }
 
 .coinTossButton {
@@ -26,8 +30,14 @@
 
 body{
 	background-image: url('/images/koi-with-berries.jpg');
-	background-size: cover;
+	background-repeat: no-repeat;
+
 }
+
+.bkimg {
+    background-image: url('/images/koi-splash.jpg');
+}
+
 
 .trans-bg{
 	background-color: rgba(255, 255, 255, 0.9);
@@ -187,8 +197,8 @@ body {
 
 .hexContainer {
 	font-style: bold;
-	postition: absolute;
-  margin-top: 50px;
+	position: fixed;
+  bottom: 100px;
   height:150px;
   
 
@@ -196,7 +206,7 @@ body {
 
 .hexButtonContainer {
   postion: absolute;
-  
+
 }
 
 

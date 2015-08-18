@@ -106,7 +106,7 @@ console.log("isEven ", isEven(coin01 + coin02 + coin03))
 		var newhex = hexagram.join('');
 		console.log("joined hexagram:", newhex)
 
-		var showhexButton=$('<a href="/hexLesson/' + newhex + '">Click here for your advice</a>')
+		var showhexButton=$('<a class="btn btn-default" href="/hexLesson/' + newhex + '">Click here for your advice</a>')
 		setTimeout(function(){
 			$(".hexButtonContainer").append(showhexButton)
 		},2000)
