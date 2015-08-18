@@ -1,6 +1,8 @@
 
 
-{
+{ "scripts":{
+    "start":"node Iching.js"
+},
   "dependencies": {
     "express": "4.x",
     "jade": "1.x",

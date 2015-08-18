@@ -5,8 +5,9 @@ var mongoose = require('mongoose');
 
 var Lesson = require('./models/lesson');
 
-mongoose.connect('mongodb://localhost/Iching');
- 
+// mongoose.connect('mongodb://localhost/Iching');
+ mongoose.connect(process.env.MONGOLAB_URI ||'mongodb://localhost/Iching');
+
 var hexLesson = [ 
       {
             code     : "111111", 

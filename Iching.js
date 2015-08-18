@@ -30,7 +30,7 @@ var authenticationController = require('./controllers/authentication');
 
 
 // Connect to the database
-mongoose.connect('mongodb://localhost/Iching');
+mongoose.connect(process.env.MONGOLAB_URI ||'mongodb://localhost/Iching');
 
 
 // Define a base express app...
@@ -98,7 +98,9 @@ app.get('/journal', indexController.getJournal)
 
 
 // Start our server!
-var server = app.listen(5297, function() {
-	console.log('Express server listening on port ' + server.address().port);
-});
+var port=process.env.PORT;
+app.listen(port || 5297);
+// var server = app.listen(5297, function() {
+// 	console.log('Express server listening on port ' + server.address().port);
+// });
 
