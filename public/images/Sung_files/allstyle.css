@@ -1,0 +1,236 @@
+BODY	{
+	background: #CCCCCC;
+	font-size: 22px;
+	font-family: Palatino Linotype, Georgia, serif;
+	color: #000000;
+	line-height: 160%;
+}
+
+
+
+A	{
+	text-decoration : none;
+	color : #BE0000;
+}
+
+A:hover {
+	color : #000000;
+}
+
+
+
+HR {
+	border-style: solid;
+	color: #DDDDDD;
+	background-color: #DDDDDD;
+	margin-top : 20px;
+	margin-bottom : 20px;
+	}
+
+
+
+IMG	{
+	border-color: #BE0000;
+}
+
+
+
+
+/* column marg */
+.mrg {
+	margin-left : 90px;
+	margin-right : 90px;
+}
+
+
+
+.title {
+	font-size : 54px;
+	font-family : Arial Narrow, Arial, Verdana, Lucida Sans, sans serif;
+	font-weight : 700;
+	line-height : 100%;
+	margin-top : 2px;
+	margin-bottom : 2px;
+	color : #BE0000;
+    text-shadow: 3px 3px #000000;
+	text-align : center;
+}
+
+.title P {
+	margin-top : 2px;
+	margin-bottom : 2px;
+}
+
+
+
+.titleby {
+	font-size : 26px;
+	font-family : Arial Narrow, Arial, Verdana, Lucida Sans, sans serif;
+	font-weight : 500;
+	line-height : 100%;
+	margin-top : 2px;
+	margin-bottom : 2px;
+	color : #BE0000;
+    text-shadow: 3px 3px #000000;
+	text-align : center;
+}
+
+.titleby P {
+	margin-top : 2px;
+	margin-bottom : 2px;
+}
+
+
+
+.meny {
+	font-size : 34px;
+	font-family : "Arial Narrow", Arial, Verdana, Lucida Sans, sans serif;
+	font-weight : 700;
+	line-height : 110%;
+	margin-top : 2px;
+	margin-bottom : 2px;
+	color : #FFFFFF;
+	text-align : center;
+}
+
+.meny P {
+	margin-top : 2px;
+	margin-bottom : 2px;
+}
+
+.meny A	{
+	color:#FFFFFF;
+}
+
+.meny a:hover {
+	background: #FFFFFF;
+	color : #AA0000;
+}
+
+
+
+/* Menu headers */
+H4 {
+	font-size : 20px;
+	font-family : Arial, Verdana, sans-serif;
+	font-weight : 700;
+	color: #BE0000;
+	line-height : 130%;
+	margin-top : 3px;
+	margin-bottom : 3px;
+}
+
+H4 P {
+	margin-top : 3px;
+	margin-bottom : 3px;
+}
+
+
+
+/* Brodtext */
+.txt {
+	font-size : 22px;
+	font-family : Palatino Linotype, Garamond, AGaramond, Schoolbook, serif;
+	color : Black;
+	line-height : 160%;
+}
+
+.txt P {
+	margin-top : 6px;
+	margin-bottom : 10px;
+}
+
+.txt A {
+	color : #BE0000;
+}
+
+.txt A:hover {
+	color: #000000;
+}
+
+
+
+/* Titel */
+H1 {
+	font-size : 40px;
+	font-weight: 900;
+	font-family: "Arial Black", Arial, Helvetica Blk, Gill Sans Ultra Bold Condensed, Haettenschweiler, sans-serif;
+	color : #BE0000;
+	line-height : 120%;
+	margin-top : 0px;
+	margin-bottom : 3px;
+}
+
+H1 P {
+	margin-top : 3px;
+	margin-bottom : 3px;
+}
+
+
+
+/* Undertitel */
+H2 {
+	font-size : 32px;
+	font-weight: 900;
+	font-family: "Arial Black", Arial, Helvetica Blk, Gill Sans Ultra Bold Condensed, Haettenschweiler, sans-serif;
+	color : #BE0000;
+	line-height : 120%;
+	margin-top : 0px;
+	margin-bottom : 3px;
+	text-align: left;
+}
+
+H2 P {
+	margin-top : 3px;
+	margin-bottom : 3px;
+}
+
+
+
+/* Mellanrubrik */
+H3 {
+	font-size : 24px;
+	font-family : "Arial Narrow", Arial, Helvetica condensed, Verdana, sans serif;
+	font-weight : 700;
+	color : #BE0000;
+	line-height : 120%;
+	margin-top : 0px;
+	margin-bottom : 3px;
+}
+
+H3 P {
+	margin-top : 3px;
+	margin-bottom : 3px;
+}
+
+
+
+/* Hexagramkodord */
+H5 {
+	font-size : 18px;
+	font-family : "Arial Narrow", Arial, Helvetica condensed, Verdana, sans serif;
+	font-weight : 700;
+	color : #BE0000;
+	line-height : 130%;
+	margin-top : 0px;
+	margin-bottom : 3px;
+}
+
+H5 P {
+	margin-top : 0px;
+	margin-bottom : 3px;
+}
+
+
+/* Apotekarstil */
+TT {
+	font-size : 20px;
+	font-family : Palatino Linotype, Garamond, AGaramond, Schoolbook, serif;
+	color : Black;
+	line-height : 100%;
+}
+
+TT P {
+	margin-top : 2px;
+	margin-bottom : 2px;
+}

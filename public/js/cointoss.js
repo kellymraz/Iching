@@ -83,7 +83,7 @@ console.log("isEven ", isEven(coin01 + coin02 + coin03))
 			$("#two-spaced").fadeIn().css({display:"block"})
 		}
 		
-		var myWaitForCoins=setTimeout(hexMaker, 1500)
+		var myWaitForCoins=setTimeout(hexMaker, 1200)
 
 	}
  
@@ -95,11 +95,11 @@ console.log("isEven ", isEven(coin01 + coin02 + coin03))
 			$("#one-solid").fadeIn().css({display:"block"})
 	 
 		}
-		var myWaitForCoins=setTimeout(hexMaker, 1500)
+		var myWaitForCoins=setTimeout(hexMaker, 1200)
 	}
 
 // setInterval(hexContainer, 5000)
-// This makes the button that takes the user to the lesson show on 6th click
+// This makes the button that takes the user to the lesson show up after the 6th click 6th click
 	console.log("hexagram:", hexagram);
 
 	if(clickCount === 6) {
@@ -107,9 +107,14 @@ console.log("isEven ", isEven(coin01 + coin02 + coin03))
 		console.log("joined hexagram:", newhex)
 
 		var showhexButton=$('<a href="/hexLesson/' + newhex + '">Click here for your advice</a>')
-		$(".hexButtonContainer").append(showhexButton)
+		setTimeout(function(){
+			$(".hexButtonContainer").append(showhexButton)
+		},2000)
+		
 		
  	}
+
+ 		
 
 
 	

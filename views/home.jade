@@ -9,7 +9,7 @@ block content
 					h3.theFont The
 					| &#x9;&#x9;
 					h1.titleFont I Ching
-					|  
+					| &#x9;&#x9;
 					| &#x9;&#x9;
 					h3.orFont or
 					| &#x9;&#x9; 
@@ -26,25 +26,21 @@ block content
 			.col-sm-offset-2.col-sm-10
 		a.coinTossButton.btn.btn-default(href="/cointoss") Ready for the Coin Toss
 				| &#x9;	
+		
+
+	
+
 		.form-group
 			.col-sm-offset-2.col-sm-10
 		a.loginButton.btn.btn-default(href="/login") Login/Journal
-				| &#x9;	
+		| &#x9;	
+		p: a(href="/auth/logout") Log out
+		.buttoncontainer
+			.col-sm-offset-2.col-sm-10
+		a.hexLessonButton.btn.btn-default(href="/hexLessons") Advice for this Hexagram
 
-			 //- p: a(href="/auth/logout") Log out
-		//- .buttoncontainer
-		//- 	.col-sm-offset-2.col-sm-10
-		//- a.hexLessonButton.btn.btn-default(href="/hexLessons") Advice for this Hexagram
 
-//- This is just a sample view rendered by our index controller.
-	h1 Private Section
-
-	//- Print the currently logged-in user's name
-	h4 Welcome, #{user.username}!
-
-	//- //- Give users a link to log out of their account
-		//- p: a(href="/auth/logout") Log out
-
+	block scripts
 
 
 				
