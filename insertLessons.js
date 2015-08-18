@@ -17,13 +17,13 @@ var hexLesson = [
             code     : "000000", 
             lesson   : "2. Field (坤 kūn); The Receptive; Needing Knowledge & Skill; Do not force matters and go with the  flow \n \n Bear with change as the earth bears with us: \n by yieldiing, by accepting, by nourishing.",
             imageUrl : '/images/hexagram02.png'
-'
+
       },
       {
             code     : "100010", 
-            lesson   : "3. Sprouting (屯 zhūn); Difficulty at the Beginning; Sprouting  \n \n If we persevere a great success is at hand.",
-            imageUrl : '/images/hexagram02.png'
-'
+            lesson   : "3. Sprouting (屯 zhūn); Difficulty at the Beginning; Sprouting \n \n If we persevere a great success is at hand.",
+            imageUrl : '/images/hexagram03.png'
+
       },
       {
             code     : "010001", 
@@ -333,10 +333,11 @@ var hexLesson = [
 ]
 //Add Comment Change this loop so it goes over an array
 
-for (code in hexLesson) {
+for (var i = 0; i < hexLesson.length; i++) {
 	var lessonObject = {
-		hexNumber: code,
-		lessonText: hexLesson[code]
+		hexNumber: hexLesson[i]['code'],
+		lessonText: hexLesson[i]['lesson'],
+            imgUrl: hexLesson[i]['imageUrl']
 	} 
 	var lesson = new Lesson(lessonObject)
 	lesson.save(function(err, doc){

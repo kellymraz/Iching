@@ -39,9 +39,10 @@ var indexController = {
 
 
 	findLesson: function(req, res){
+		console.log("params  " , req.params.lesson)
 		Lesson.findOne({hexNumber:req.params.lesson}, function(err, doc){
-			console.log('lesson:  ', doc)
-			console.log('err:  ', err)
+			// console.log('lesson:  ', doc)
+			// console.log('err:  ', err)
 			res.render("lesson", {
 				user: req.user,
 				lesson: doc
