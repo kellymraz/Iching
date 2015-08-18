@@ -54,7 +54,7 @@ function flipMe(whichCoin){
 // clickCount makes sure only six lines are drawn to make the hexagram
 var clickCount = 0
 
-var hexagram = [];
+hexagram = [];
 
 $(".coinTossButton").click(function(e){
 	e.preventDefault();
@@ -77,19 +77,29 @@ console.log("coin03 ", coin03)
 console.log("isEven ", isEven(coin01 + coin02 + coin03))
 
 	if (isEven(coin01 + coin02 + coin03)) {
-		$(".hexContainer").prepend('<img class="displayBlock" src="images/two-spaced.png">')
 		hexagram.push("0")
+		var hexMaker=function(){
+			$(".hexContainer").prepend('<img class="displayBlock" id="two-spaced" src="images/two-spaced.png">')
+			$("#two-spaced").fadeIn().css({display:"block"})
+		}
+		
+		var myWaitForCoins=setTimeout(hexMaker, 1500)
 
 	}
  
 		
 	else {
-		$(".hexContainer").prepend('<img class="displayBlock" src="images/one-solid.png">')
- 		hexagram.push("1")
+		hexagram.push("1")
+		var hexMaker=function(){
+			$(".hexContainer").prepend('<img class="displayBlock" id="one-solid" src="images/one-solid.png">')
+			$("#one-solid").fadeIn().css({display:"block"})
+	 
+		}
+		var myWaitForCoins=setTimeout(hexMaker, 1500)
 	}
 
-
-// Begin attempt to make button show on 6th click
+// setInterval(hexContainer, 5000)
+// This makes the button that takes the user to the lesson show on 6th click
 	console.log("hexagram:", hexagram);
 
 	if(clickCount === 6) {

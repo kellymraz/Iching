@@ -1,4 +1,4 @@
-// We are inserting lessons into the mongoose data
+// We are inserting lessons into the mongoose database
 
 var mongoose = require('mongoose');
 
@@ -14,7 +14,7 @@ var hexLesson = {
       '010001' : '4. Enveloping (蒙 méng); Youthful Folly; Detained, Enveloped and Inexperienced \n \n Even the foolish can attain wisdom \n by modestly following the Sage.',
       '111010' : '5. Attending (需 xū); Waiting; Uninvolvement (Wait for now), Nourishment \n \n To wait with a proper attidude \n invites the assistance fo the Higher Power.',
       '010111' : '6. Arguing (訟 sòng); Conflict; Engagement in Conflict \n \n The proper response to conflict, \n whether it lies within or without us, is disengagement.',
-      '010000' : '7. Leading (師 shī); The Army; Bringing Together, Teamwork \n In times of war it is desirable \n \n to be led by a cautious and humane general.',
+      '010000' : '7. Leading (師 shī); The Army; Bringing Together, Teamwork \n \nIn times of war it is desirable \n to be led by a cautious and humane general.',
       '000010' : '8. Grouping (比 bǐ); Holding Together; Union \n \n Seek union with others and with the Sage.',
       '111011' : '9. Small Accumulating (小畜 xiǎo chù); Small Taming; Accumulating Resources \n \n You are temporarily restrained. \n It is a time for taking small steps.',
       '110111' : '10. Treading (履 lǚ); Treading (Conduct); Continuing with Alertness \n \n Lasting progress is won \n through quiet self-discipline.',

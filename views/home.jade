@@ -31,9 +31,10 @@ block content
 		a.loginButton.btn.btn-default(href="/login") Login/Journal
 				| &#x9;	
 
-		.buttoncontainer
-			.col-sm-offset-2.col-sm-10
-		a.hexLessonButton.btn.btn-default(href="/hexLessons") Advice for this Hexagram
+			 //- p: a(href="/auth/logout") Log out
+		//- .buttoncontainer
+		//- 	.col-sm-offset-2.col-sm-10
+		//- a.hexLessonButton.btn.btn-default(href="/hexLessons") Advice for this Hexagram
 
 //- This is just a sample view rendered by our index controller.
 	h1 Private Section
@@ -41,8 +42,8 @@ block content
 	//- Print the currently logged-in user's name
 	h4 Welcome, #{user.username}!
 
-	//- Give users a link to log out of their account
-	p: a(href="/auth/logout") Log out
+	//- //- Give users a link to log out of their account
+		//- p: a(href="/auth/logout") Log out
 
 
 

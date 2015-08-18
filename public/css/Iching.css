@@ -1,7 +1,7 @@
 
 
 .displayBlock {
-	display: block;
+	display: none;
 	margin: 10px;
 
 }
@@ -18,7 +18,7 @@
 }
 
 body{
-	background-image: url('/images/close-up-branch.jpeg');
+	background-image: url('/images/koi-with-berries.jpg');
 	background-size: cover;
 }
 

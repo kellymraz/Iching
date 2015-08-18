@@ -8,14 +8,14 @@ block content
     h3= error
 
   //- Form for handling existing user logins.
-  h1 This is where you login to get to your journal
+  h1 Login to your Journal
   form(action="/auth/login", method="post")
       input(type="text", name="username", placeholder="Username")
       input(type="password", name="password", placeholder="Password")
       input(type="submit")
 
   //- Form for allowing new users to register.
-  h1 Register
+  h1 Create an Account
   form(action="/auth/signup", method="post")
     input(type="text", name="username", placeholder="Username")
     input(type="email", name="email", placeholder="Email")
