@@ -1,23 +1,25 @@
-h1 This is the advice you seek
-p #{lesson.lessonText}
-p #{lesson.hexNumber}
-img(src="#{lesson.imgUrl}")
+extends layout
+block content
+	h1 This is the advice you seek
+	p #{lesson.lessonText}
+	p #{lesson.hexNumber}
+	img(src="#{lesson.imgUrl}")
 
-p In the text you may see reference to "the Sage", "the Creative", or "the Higher Power", and so on. The equivalent in your own mind by be "God" or "my higher self" or "the universe" or some other term.  Simply substitute the word or phrase that works comfortably for you.
-
-
-p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu cursus elit. Morbi feugiat nulla commodo mi scelerisque pellentesque. Vivamus a nunc urna. In ut arcu vel tellus sollicitudin feugiat. Etiam consectetur tortor in ligula dictum ullamcorper vitae vel turpis. Sed nec erat justo. Praesent et enim justo. Etiam nec massa sit amet augue semper lobortis a in dolor. Donec ac neque enim. Aliquam erat volutpat. Curabitur viverra ullamcorper pellentesque. Suspendisse laoreet eros nec euismod pellentesque. Praesent eget est justo.
-
-p Meuismod pellentesque eros, at malesuada sem dictum in. Sed feugiat odio in turpis maximus convallis. Vestibulum commodo sapien ipsum, a blandit ex finibus porta. Sed egestas lacus sit amet rhoncus volutpat. Praesent ut sapien porta, elementum sapien et, varius quam. Ut ullamcorper ipsum vel sollicitudin facilisis. Integer convallis quis leo at commodo. Quisque pretium mollis turpis, vel feugiat augue commodo ut. Vestibulum vel imperdiet ante, a viverra leo. Proin congue eros non dui pretium, vitae ultricies est mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Interdum et malesuada fames ac ante ipsum primis in faucibus.
+	p In the text you may see reference to "the Sage", "the Creative", or "the Higher Power", and so on. The equivalent in your own mind by be "God" or "my higher self" or "the universe" or some other term.  Simply substitute the word or phrase that works comfortably for you.
 
 
-p Brian Browne Walker, The I Ching or Book of Changes:  A Guide to Life's Turning Points (New York: St. Martin's Press, 1992).
+	p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu cursus elit. Morbi feugiat nulla commodo mi scelerisque pellentesque. Vivamus a nunc urna. In ut arcu vel tellus sollicitudin feugiat. Etiam consectetur tortor in ligula dictum ullamcorper vitae vel turpis. Sed nec erat justo. Praesent et enim justo. Etiam nec massa sit amet augue semper lobortis a in dolor. Donec ac neque enim. Aliquam erat volutpat. Curabitur viverra ullamcorper pellentesque. Suspendisse laoreet eros nec euismod pellentesque. Praesent eget est justo.
 
-		a.loginButton.btn.btn-default(href="/login") Login/Journal
+	p Meuismod pellentesque eros, at malesuada sem dictum in. Sed feugiat odio in turpis maximus convallis. Vestibulum commodo sapien ipsum, a blandit ex finibus porta. Sed egestas lacus sit amet rhoncus volutpat. Praesent ut sapien porta, elementum sapien et, varius quam. Ut ullamcorper ipsum vel sollicitudin facilisis. Integer convallis quis leo at commodo. Quisque pretium mollis turpis, vel feugiat augue commodo ut. Vestibulum vel imperdiet ante, a viverra leo. Proin congue eros non dui pretium, vitae ultricies est mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Interdum et malesuada fames ac ante ipsum primis in faucibus.
 
-		a.loginButton.btn.btn-default(href="/cointoss") To Coin Toss
 
-		a.loginButton.btn.btn-default(href="/home") Back to Main Page
+	p Adapted from Brian Browne Walker, The I Ching or Book of Changes:  A Guide to Life's Turning Points (New York: St. Martin's Press, 1992).
+
+	a.loginButton.btn.btn-default(href="/login") Login/Journal
+
+	a.loginButton.btn.btn-default(href="/cointoss") To Coin Toss
+
+	a.loginButton.btn.btn-default(href="/home") Back to Main Page
 
 
 

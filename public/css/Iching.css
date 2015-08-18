@@ -2,8 +2,15 @@
 
 .displayBlock {
 	display: none;
-	margin: 10px;
+	margin: 10px auto;
+  height:20px;
+  width:250px;
 
+}
+
+.coinTossButton {
+  display: block;
+  margin: auto;
 }
 
 .portfolio-item {
@@ -13,7 +20,7 @@
 
 .titles{
 	position: relative;
-	left:500px;
+	left:400px;
 	top:10px;
 }
 
@@ -154,7 +161,7 @@ body {
 .titleFont {
 	font-family: Arnoldboecklin, fantasy;
 	font-weight: bold;
-	font-size: 5em;
+	font-size: 7em;
 
 }
 
@@ -167,7 +174,7 @@ body {
 .secondTitleFont {
 	font-family: Arnoldboecklin, fantasy;
 	font-weight: bold;
-
+  font-size: 3em;
 
 }
 
@@ -181,10 +188,16 @@ body {
 .hexContainer {
 	font-style: bold;
 	postition: absolute;
+  margin-top: 50px;
+  height:150px;
+  
 
 }
 
-
+.hexButtonContainer {
+  postion: absolute;
+  
+}
 
 
 
