@@ -32,9 +32,8 @@ body{
 	background-image: url('/images/koi-with-berries.jpg');
 	background-repeat: no-repeat;
 
-}
-
-.bkimg {
+}/*Background for journal.jade*/
+.bkimg-journal {
     background-image: url('/images/yellow-birds-maple.jpg');
 }
 
