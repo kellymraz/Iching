@@ -1,4 +1,24 @@
+.question-container {
+  text-align: left;
+  margin-top: 10px;
+  margin-right: 20px
 
+}
+
+.backHomeButton {
+  margin-right: 30px;
+
+}
+
+.hexButtonContainer {
+  margin-right: 30px;
+}
+
+.button-container {
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 18px 0px;
+}
 
 .displayBlock {
 	display: none;
@@ -10,6 +30,49 @@
 
 .showHexButton {
   position: absolute;
+}
+
+.transparencyHolder {
+  height: 100vh;
+  width: 100vw;
+  padding-top: 50px;
+
+}
+
+.transparencyHolder.home {
+  background-image: url('/images/koi-with-berries.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.transparencyHolder.cointoss {
+  background-image: url('/images/koi-with-berries.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.transparencyHolder.lesson {
+  background-image: url('/images/yellow-birds-maple.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.transparencyHolder.journal {
+  background-image: url('/images/butterfly-flowers.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.transparencyHolder.howto {
+  background-image: url('/images/koi-with-berries.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.transparencyHolder.login {
+  background-image: url('/images/koi-with-berries.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .coinTossButton {
@@ -33,10 +96,11 @@ body{
 	background-repeat: no-repeat;
 
 }/*Background for journal.jade*/
+
 .bkimg-journal {
     background-image: url('/images/yellow-birds-maple.jpg');
+    background-repeat: no-repeat;
 }
-
 
 .trans-bg{
 	background-color: rgba(255, 255, 255, 0.9);
@@ -47,14 +111,14 @@ body{
 }
 
 .push-down{
-  margin-top: 50px;
+  /*margin-top: 50px;*/
 }
 
 /*Below begins the Animate.css Coin Flip*/
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
 body {
   font-family: 'Open Sans', sans-serif;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
 }
 
 .wrap {
@@ -170,7 +234,7 @@ body {
 .titleFont {
 	font-family: Arnoldboecklin, fantasy;
 	font-weight: bold;
-	font-size: 7em;
+	font-size: 8em;
 
 }
 
@@ -187,6 +251,11 @@ body {
 
 }
 
+.howtoFont {
+  font-family: Arnoldboecklin, fantasy;
+  font-weight: bold;
+
+}
 
 .guideFont {
 	font-family: Arnoldboecklin, fantasy;
@@ -199,12 +268,13 @@ body {
 	position: fixed;
   bottom: 100px;
   height:150px;
+  padding-top: 18px;
   
 
 }
 
 .hexButtonContainer {
-  postion: absolute;
+  text-align: center;
 
 }
 

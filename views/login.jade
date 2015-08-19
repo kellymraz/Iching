@@ -1,29 +1,20 @@
 extends layout
-
 block content
-  //- Error comes through via the context passed when calling res.render('login', {...})
-  //- You'll see this in controllers/authentication.js
-  //- If the error exists, we'll display it.
-  if error
-    h3= error
+	.transparencyHolder.login
+		.container.trans-bg.push-down
+			h1 Login to your Journal
+				form(action="/auth/login", method="post")
+					input(type="text", name="username", placeholder="Username")
+					input(type="password", name="password", placeholder="Password")
+					input(type="submit")
 
-  //- Form for handling existing user logins.
-  h1 Login to your Journal
-  form(action="/auth/login", method="post")
-      input(type="text", name="username", placeholder="Username")
-      input(type="password", name="password", placeholder="Password")
-      input(type="submit")
+			h1 Create an Account
+				form(action="/auth/signup", method="post")
+					input(type="text", name="username", placeholder="Username")
+					input(type="email", name="email", placeholder="Email")
+					input(type="password", name="password", placeholder="Password")
+					input(type="submit")
 
-  //- Form for allowing new users to register.
-  h1 Create an Account
-  form(action="/auth/signup", method="post")
-    input(type="text", name="username", placeholder="Username")
-    input(type="email", name="email", placeholder="Email")
-    input(type="password", name="password", placeholder="Password")
-    input(type="submit")
+			a.toHomeButton.btn.btn-default(href="/home") Return to main page
 
-  a.toHomeButton.btn.btn-default(href="/home") Return to main page
-
-  a.toCoinTossButton.btn.btn-default(href="/cointoss") Return to coin toss
-
-      
+			a.toCoinTossButton.btn.btn-default(href="/cointoss") Return to coin toss

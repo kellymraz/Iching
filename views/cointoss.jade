@@ -1,42 +1,39 @@
 //- Can think of this as the html for the coin toss
 extends layout
-
 block content
-
-	.row
-		form.form-horizontal
-			.form-group
-				label.col-sm-2.control-label(for='inputQuestion') Question
-				.col-sm-10
-					input#inputQuestion.form-control(type='text', placeholder='Ex. Should I...') 
-	.row
-		.wrap
-			.image.col-md-4#coin01
-				img(src="images/dragoncoin-heads.png")
-			.image.col-md-4#coin02
-				img(src="images/dragoncoin-heads.png")
-			.image.col-md-4#coin03
-				img(src="images/dragoncoin-heads.png")
-			button.coinTossButton.btn.btn-default(type='submit') Click Here to Toss the Coins 6 Times(remember to concentrate on your question!)
-						//- .row
-						//- 	.coinContainer1.col-md-4
-						
-						//- 	.coinContainer2.col-md-4
-						
-						//- 	.coinContainer3.col-md-4
-	.row
-		.hexContainer.col-md-12
-
-		.hexButtonContainer.col-md-12
-
-
-	a.backHomeButton.btn.btn-default(href="/home") Back to Main Page
+	.transparencyHolder.cointoss
+		.row
+			.col-xs-6.col-md-offset-3
+				form.form-horizontal
+					.form-group
+						label.col-sm-2.control-label(for='inputQuestion') Question
+						input#inputQuestion.form-control(type='text', placeholder='Ex. Should I...') 
+		.row
+			.wrap
+				.image.col-md-4#coin01
+					img(src="images/dragoncoin-heads.png")
+				.image.col-md-4#coin02
+					img(src="images/dragoncoin-heads.png")
+				.image.col-md-4#coin03
+					img(src="images/dragoncoin-heads.png")
+				button.coinTossButton.btn.btn-default(type='submit') Click Here to Toss the Coins 6 Times(remember to concentrate on your question!)
+							//- .row
+							//- 	.coinContainer1.col-md-4
+							
+							//- 	.coinContainer2.col-md-4
+							
+							//- 	.coinContainer3.col-md-4
+		.row
+			.hexContainer.col-md-12
+			.button-container		
+				a.backHomeButton.btn.btn-default(href="/home") Back to Main Page
+			.hexButtonContainer
 
 
-block scripts
-	script(src="js/cointoss.js")
+	block scripts
+		script(src="js/cointoss.js")
 
-					//- <!-- // hexagram container -->
-					//- .hexContainer
-					//- 	.portfolio-item
-					//- 		// <img src="images/one-solid.png">
+						//- <!-- // hexagram container -->
+						//- .hexContainer
+						//- 	.portfolio-item
+						//- 		// <img src="images/one-solid.png">

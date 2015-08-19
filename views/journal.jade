@@ -1,16 +1,16 @@
 extends layout
 
 block content
+	.transparencyHolder.journal
+		.container.trans-bg.push-down
 
-	body.bkimg
+				p JOURNAL
 
-		p This is your journal
+				a.toHomeButton.btn.btn-default(href="/home") TO MAIN PAGE
 
-		a.toHomeButton.btn.btn-default(href="/home") Return to main page
+				a.toCoinTossButton.btn.btn-default(href="/cointoss") TO COIN TOSS
 
-		a.toCoinTossButton.btn.btn-default(href="/cointoss") Return to coin toss
-
-		a.logoutButton.btn.btn-default(href="/auth/logout") Logout of Journal
+				a.logoutButton.btn.btn-default(href="/auth/logout") LOGOUT OF JOURNAL
 
 
 
