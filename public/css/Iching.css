@@ -9,7 +9,9 @@
   margin-right: 30px;
 
 }
-
+.backhome {
+  display: block;
+}
 .hexButtonContainer {
   margin-right: 30px;
 }
@@ -19,6 +21,15 @@
   margin-bottom: 10px;
   padding: 18px 0px;
 }
+
+.login-button-container {
+  margin-bottom: 10px;
+}
+/*.lessonButtonContainer {
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 18px 0px;
+}*/
 
 .displayBlock {
 	display: none;
@@ -207,22 +218,20 @@ body {
 
           /*End Animate.css Coin Flip*/
 
-/*.titles{
 
-	position: absolute;
-  	top: 10px;
-  	left: 10px;
-  	background-image: url("images/bridge.jpeg");
-  	background-repeat: no-repeat;
-  	width: 1000px;
-  	height: 1000px;
-  	background-size: 1000px 360px;
-  	z-index: -1;*/
+.container.standout-text {
+  font-family: Arnoldboecklin, fantasy;
+  font-weight: bold;
+  font-size: 2em;
 
-/*}
-*/
-	  
+}	  
 
+.container.body-text {
+  font-family: Arnoldboecklin, fantasy;
+  font-weight: bold;
+  font-size: 1em;
+  padding-top: 10px
+}   
 
 .theFont {
 	font-family: Arnoldboecklin, fantasy;
@@ -254,6 +263,7 @@ body {
 .howtoFont {
   font-family: Arnoldboecklin, fantasy;
   font-weight: bold;
+  font-size: 17px;
 
 }
 
@@ -262,6 +272,13 @@ body {
 	font-style: italic;
 	font-weight: bold;
 }
+
+.container.login-text {
+  font-family: Arnoldboecklin, fantasy;
+  font-weight: bold;
+  font-size: 20px;
+}
+
 
 .hexContainer {
 	font-style: bold;
