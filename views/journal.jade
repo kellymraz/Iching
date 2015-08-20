@@ -2,16 +2,20 @@ extends layout
 
 block content
 	.transparencyHolder.journal
-		
-		p JOURNAL
+		.container.login-text
+			.trans-bg
+				div May 18, 2015: hello! today the I Ching told me that I 
+					|should definitely go to the bootcamp at RefactorU.
+					|apparently the creative power of the universe...
 
-		.button-container
+					.trans-bg.bottom-buttons
+						.button-container
+							a.toHomeButton.btn.btn-default(href="/home") TO MAIN PAGE
 
-			a.toHomeButton.btn.btn-default(href="/home") TO MAIN PAGE
+							a.toCoinTossButton.btn.btn-default(href="/cointoss") TO COIN TOSS
 
-			a.toCoinTossButton.btn.btn-default(href="/cointoss") TO COIN TOSS
-
-			a.logoutButton.btn.btn-default(href="/auth/logout") LOGOUT OF JOURNAL
+							a.logoutButton.btn.btn-default(href="/auth/logout") LOGOUT OF JOURNAL
 
 
 
+block scripts

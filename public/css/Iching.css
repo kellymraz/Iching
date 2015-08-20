@@ -5,6 +5,12 @@
 
 }
 
+.bottom-buttons {
+  position: absolute;
+  bottom: 0px;
+  width: 100vw;
+}
+
 .backHomeButton {
   margin-right: 30px;
 
