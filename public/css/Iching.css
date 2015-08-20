@@ -21,7 +21,9 @@
 .hexButtonContainer {
   margin-right: 30px;
 }
-
+.small-spacing {
+  margin:10px;
+}
 .button-container {
   text-align: center;
   margin-bottom: 10px;
@@ -50,8 +52,8 @@
 }
 
 .transparencyHolder {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   padding-top: 50px;
 
 }
@@ -62,11 +64,11 @@
     background-size: cover;
 }
 
-.transparencyHolder.cointoss {
+/*.transparencyHolder.cointoss {
   background-image: url('/images/koi-with-berries.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-}
+}*/
 
 .transparencyHolder.lesson {
   background-image: url('/images/yellow-birds-maple.jpg');
@@ -80,11 +82,11 @@
     background-size: cover;
 }
 
-.transparencyHolder.howto {
+/*.transparencyHolder.howto {
   background-image: url('/images/koi-with-berries.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-}
+}*/
 
 .transparencyHolder.login {
   background-image: url('/images/koi-with-berries.jpg');
@@ -111,6 +113,7 @@
 body{
 	background-image: url('/images/koi-with-berries.jpg');
 	background-repeat: no-repeat;
+  background-size:cover;
 
 }/*Background for journal.jade*/
 
@@ -295,8 +298,8 @@ body {
 
 .hexContainer {
 	font-style: bold;
-	position: fixed;
-  bottom: 100px;
+	position: absolute;
+  top: 83%;
   height:150px;
   padding-top: 18px;
   
@@ -305,6 +308,11 @@ body {
 
 .hexButtonContainer {
   text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 120%;
+    margin-bottom: 50px;
+}
 
 }
 
