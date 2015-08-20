@@ -6,8 +6,7 @@ block content
 			.col-xs-6.col-md-offset-3
 				form.form-horizontal
 					.form-group
-						label.col-sm-2.control-label(for='inputQuestion') You may enter your question here, or hold on to it in your mind.
-						input#inputQuestion.form-control(type='text', placeholder='Ex. Should I...') 
+						input#inputQuestion.form-control.cointossFont(type='text', placeholder='Ex. Should I...') 
 		.row
 			.wrap
 				.image.col-md-4#coin01
@@ -16,19 +15,13 @@ block content
 					img(src="images/dragoncoin-heads.png")
 				.image.col-md-4#coin03
 					img(src="images/dragoncoin-heads.png")
-				button.coinTossButton.btn.btn-default(type='submit') Click Here to Toss the Coins 6 Times(remember to concentrate on your question!)
-							
 		.row
 			.hexContainer.col-md-12
 			.button-container		
-				a.backHomeButton.btn.btn-default(href="/home") Back to Main Page
+				a.backHomeButton.btn.btn-default.cointossFont(href="/home") Back to Main Page
+				button.coinTossButton.btn.btn-default.cointossFont(type='submit') Click Here to Toss the Coins 6 Times(remember to concentrate on your question!)
 			.hexButtonContainer
+		block scripts
+			script(src="js/cointoss.js")
 
-
-	block scripts
-		script(src="js/cointoss.js")
-
-						//- <!-- // hexagram container -->
-						//- .hexContainer
-						//- 	.portfolio-item
-						//- 		// <img src="images/one-solid.png">
+							

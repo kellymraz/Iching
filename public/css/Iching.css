@@ -273,6 +273,13 @@ body {
 
 }
 
+.cointossFont {
+  font-family: Arnoldboecklin, fantasy;
+  font-weight: bold;
+  font-size: 1.5em;
+
+}
+
 .guideFont {
 	font-family: Arnoldboecklin, fantasy;
 	font-style: italic;
