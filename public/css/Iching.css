@@ -298,9 +298,9 @@ body {
 
 .hexContainer {
 	font-style: bold;
-	position: absolute;
+	/*position: absolute;*/
   top: 83%;
-  height:150px;
+  height:250px;
   padding-top: 18px;
   
 
@@ -308,7 +308,7 @@ body {
 
 .hexButtonContainer {
   text-align: center;
-    position: absolute;
+    /*position: absolute;*/
     width: 100%;
     top: 120%;
     margin-bottom: 50px;
